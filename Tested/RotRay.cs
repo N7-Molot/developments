@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-///  Поворот объекта согласно углу геометрии Terrain. Можно использовать для менеджера появления объектов
+///  Object pointers according to the angle of the Terrain geometries. Can be used for object appearance manager
 /// </summary>
 public class RotRay: MonoBehaviour {
 	[Tooltip ("Поворот появления"), SerializeField] Quaternion spawnRot;
@@ -13,7 +13,7 @@ public class RotRay: MonoBehaviour {
 	}
 
 	/// <summary>
-	/// Изменение поворота объекта согласно нормали точки луча
+	/// Changing the rotation of the object according to the normal of the ray point
 	/// </summary>
 	void CastRay () {
 		Ray _newRay = new Ray (transform.position, -transform.up * 100);
@@ -22,7 +22,7 @@ public class RotRay: MonoBehaviour {
 		if (Physics.Raycast (_newRay, out _newRaycastHit)) {
 			if (_newRaycastHit.collider.GetComponent <Terrain> ()) {
 				spawnRot = Quaternion.FromToRotation (_newRaycastHit.transform.position + _newRaycastHit.transform.up, _newRaycastHit.normal);
-				Debug.Log ($"Угол поворота: {spawnRot}");
+				Debug.Log ($"New object rotation: {spawnRot}");
 			}
 		}
 
