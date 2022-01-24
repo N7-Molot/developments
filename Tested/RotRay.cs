@@ -5,8 +5,8 @@ using UnityEngine.UI;
 ///  Object pointers according to the angle of the Terrain geometries. Can be used for object appearance manager
 /// </summary>
 public class RotRay: MonoBehaviour {
-	[Tooltip ("Поворот появления"), SerializeField] Quaternion spawnRot;
-	[Tooltip ("Кнопка работы"), SerializeField] Button isWork;
+	[Tooltip ("Current rotation object"), SerializeField] Quaternion spawnRot;
+	[Tooltip ("Work start button"), SerializeField] Button isWork;
 
 	void Start () {
 		isWork.onClick.AddListener (CastRay);
