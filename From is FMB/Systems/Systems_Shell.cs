@@ -8,8 +8,17 @@ namespace GuildCheramor.System {
 	/// </summary>
 	[AddComponentMenu ("Guild Cheramor/System/Shell", order: 309)]
 	public class System_Shell: MonoBehaviour {
+		/// <summary>
+		/// Warrior - as the owner of the projectile
+		/// </summary>
 		[HideInInspector] public System_Unit unit;
+		/// <summary>
+		/// Target - warrior
+		/// </summary>
 		[HideInInspector] public System_Unit target;
+		/// <summary>
+		/// Base - as the owner of the projectile
+		/// </summary>
 		[HideInInspector] public System_Base_AttackPoint attackPoint;
 
 		[Tooltip ("Rigidbody of the shell"), SerializeField] Rigidbody thisRigidbody;
