@@ -1,3 +1,2 @@
 # developments
-My developments
-Мои наработки для себя и для вас=)
+My achievements for me and for you =)
